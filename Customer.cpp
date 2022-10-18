@@ -49,16 +49,17 @@ std::string Customer::statement()
     }*/
 
     // Add frequent renter points
-    frequentRenterPoints++;
+    frequentRenterPoints += each.getFrequentRenterPoints();
 
     // Add bonus for a two day new release rental
-    if ( ( each.getMovie().getPriceCode() == Movie::NEW_RELEASE )
-         && each.getDaysRented() > 1 ) frequentRenterPoints++;
+    // [Jay] frequentRenterPoints를 계산하는 것도 영화의 종류에 따라 달라지기 때문에 별도의 메서드로 호출.
+    /*if ( ( each.getMovie().getPriceCode() == Movie::NEW_RELEASE )
+         && each.getDaysRented() > 1 ) frequentRenterPoints++;*/
 
     // Show figures for this rental
     result << "\t" << each.getMovie().getTitle() << "\t"
-           << each.AmountCalc() << std::endl;
-    totalAmount += each.AmountCalc();
+           << each.getAmount() << std::endl;
+    totalAmount += each.getAmount();
   }
 
   // Add footer lines

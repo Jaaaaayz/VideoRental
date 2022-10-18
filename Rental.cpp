@@ -2,7 +2,7 @@
 #include "Rental.h"
 
 
-double Rental::AmountCalc()
+double Rental::getAmount()
 {
     double Amount = 0;
     // Determine amounts for each rental
@@ -26,4 +26,16 @@ double Rental::AmountCalc()
     }
 
     return Amount;
+}
+
+int Rental::getFrequentRenterPoints()
+{
+    int Points = 0;
+    Points++;
+
+    if ((getMovie().getPriceCode() == Movie::NEW_RELEASE)
+        && getDaysRented() > 1) 
+        Points++;
+
+    return Points;
 }
