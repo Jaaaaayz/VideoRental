@@ -146,13 +146,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ChildrensPrice.cpp" />
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="NewReleasePrice.cpp" />
+    <ClCompile Include="RegularPrice.cpp" />
+    <ClCompile Include="Rental.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ChildrensPrice.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Movie.h" />
+    <ClInclude Include="NewReleasePrice.h" />
+    <ClInclude Include="Price.h" />
+    <ClInclude Include="RegularPrice.h" />
     <ClInclude Include="Rental.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

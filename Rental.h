@@ -2,6 +2,7 @@
 #ifndef RENTAL_H
 #define RENTAL_H
 #include "Movie.h"
+#include "Price.h"
 
 class Rental {
 public:

@@ -25,36 +25,8 @@ std::string Customer::statement()
    // double thisAmount = 0;
     Rental each = *iter;
 
-    // [Jay] Gets the rent calculated in the 'Rental' class.
-    //thisAmount = each.AmountCalc();
-
-    // Determine amounts for each rental
-    /*switch ( each.getMovie().getPriceCode() ) {
-
-      case Movie::REGULAR:
-        thisAmount += 2.;
-        if ( each.getDaysRented() > 2 )
-          thisAmount += ( each.getDaysRented() - 2 ) * 1.5 ;
-        break;
-
-      case Movie::NEW_RELEASE:
-        thisAmount += each.getDaysRented() * 3;
-        break;
-
-      case Movie::CHILDRENS:
-        thisAmount += 1.5;
-        if ( each.getDaysRented() > 3 )
-          thisAmount += ( each.getDaysRented() - 3 ) * 1.5;
-        break;
-    }*/
-
     // Add frequent renter points
     frequentRenterPoints += each.getFrequentRenterPoints();
-
-    // Add bonus for a two day new release rental
-    // [Jay] frequentRenterPoints를 계산하는 것도 영화의 종류에 따라 달라지기 때문에 별도의 메서드로 호출.
-    /*if ( ( each.getMovie().getPriceCode() == Movie::NEW_RELEASE )
-         && each.getDaysRented() > 1 ) frequentRenterPoints++;*/
 
     // Show figures for this rental
     result << "\t" << each.getMovie().getTitle() << "\t"
@@ -70,30 +42,4 @@ std::string Customer::statement()
   return result.str();
 }
 
-//[Jay] Implement a function that calculates amount.
-//[Jay] Move the function because it uses the information in the 'Rental' class.
-//double Customer::AmountCalc(Rental each)
-//{
-//    double thisAmount = 0;
-//    switch (each.getMovie().getPriceCode()) {
-//
-//    case Movie::REGULAR:
-//        thisAmount += 2.;
-//        if (each.getDaysRented() > 2)
-//            thisAmount += (each.getDaysRented() - 2) * 1.5;
-//        break;
-//
-//    case Movie::NEW_RELEASE:
-//        thisAmount += each.getDaysRented() * 3;
-//        break;
-//
-//    case Movie::CHILDRENS:
-//        thisAmount += 1.5;
-//        if (each.getDaysRented() > 3)
-//            thisAmount += (each.getDaysRented() - 3) * 1.5;
-//        break;
-//    }
-//    return thisAmount;
-//
-//}
 
