@@ -24,7 +24,7 @@ private:
   std::vector< Rental > customerRentals;
 
   //[Jay] Add function that calculates amount.
-  double AmountCalc(Rental each);
+  //double AmountCalc(Rental each);
 
 };
 
