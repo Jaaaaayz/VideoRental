@@ -36,6 +36,9 @@
     <ClCompile Include="ChildrensPrice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HorrorPrice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rental.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ChildrensPrice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HorrorPrice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

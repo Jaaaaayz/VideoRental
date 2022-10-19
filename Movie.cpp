@@ -4,11 +4,13 @@
 #include "RegularPrice.h"
 #include "NewReleasePrice.h"
 #include "ChildrensPrice.h"
+#include "HorrorPrice.h"
 #include "Movie.h"
 
 const int Movie::CHILDRENS;
 const int Movie::REGULAR;
 const int Movie::NEW_RELEASE;
+const int Movie::HORROR;
 
 Movie::Movie(const std::string& title, int priceCode)
 {
@@ -27,6 +29,9 @@ void Movie::setPriceCode(int arg)
 		break;
 	case CHILDRENS:
 		m_pPrice = new ChildrensPrice();
+		break;
+	case HORROR:
+		m_pPrice = new HorrorPrice();
 		break;
 	}
 }

@@ -14,8 +14,7 @@ double NewReleasePrice::getCharge(int daysRented)
 
 int NewReleasePrice::getFrequentRenterPoints(int daysRented)
 {
-    int Points = 0;
-    Points++;
+    int Points = 1;
 
     if (daysRented > 1)
         Points++;
