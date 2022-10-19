@@ -1,4 +1,4 @@
-// Movie.cpp
+﻿// Movie.cpp
 //#include "RegularPrice.h"
 #include "Price.h"
 #include "RegularPrice.h"
@@ -23,15 +23,19 @@ void Movie::setPriceCode(int arg)
 	switch (arg) {
 	case REGULAR:
 		m_pPrice = new RegularPrice();
+		movieCode = "REGULAR";
 		break;
 	case NEW_RELEASE:
 		m_pPrice = new NewReleasePrice();
+		movieCode = "NEW_RELEASE";
 		break;
 	case CHILDRENS:
 		m_pPrice = new ChildrensPrice();
+		movieCode = "CHILDRENS";
 		break;
 	case HORROR:
 		m_pPrice = new HorrorPrice();
+		movieCode = "HORROR";
 		break;
 	}
 }

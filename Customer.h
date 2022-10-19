@@ -1,4 +1,4 @@
-// Customer.hh
+﻿// Customer.hh
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
@@ -18,6 +18,8 @@ public:
 
   // Generate a statement for the customer
   std::string statement();
+  // [ Jay ] JSON 형식으로 출력되는 함수 추가.
+  std::string JSONStatement();
 
 private:
   std::string customerName;
