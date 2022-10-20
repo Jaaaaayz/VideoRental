@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 class ChildrensPrice : virtual public Price
 {
