@@ -13,6 +13,7 @@ public:
   static const int HORROR	   = 3;
 
   Movie( const std::string& title, int priceCode = REGULAR );
+  ~Movie(void);
 
   void setPriceCode( int arg );
   std::string getstrPriceCode() const;
@@ -34,6 +35,8 @@ private:
 inline std::string Movie::getstrPriceCode() const { return movieCode; }
 
 inline std::string Movie::getTitle() const { return movieTitle; }
+
+inline Movie::~Movie(void) {}
 
 
 #endif // MOVIE_H

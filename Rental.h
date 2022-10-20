@@ -7,6 +7,7 @@
 class Rental {
 public:
   Rental( const Movie& movie, int daysRented );
+  ~Rental(void);
 
   int getDaysRented() const;
   const Movie& getMovie() const;
@@ -21,6 +22,7 @@ private:
 inline Rental::Rental( const Movie& movie, int daysRented ):
   rentedMovie( movie ),
   nDaysRented( daysRented ) {}
+inline Rental::~Rental(void) {}
 
 inline int Rental::getDaysRented() const { return nDaysRented; }
 

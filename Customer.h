@@ -12,6 +12,7 @@ class Customer {
 public:
   Customer();
   explicit Customer( const std::string& name );
+  ~Customer(void);
 
   void addRental( const Rental& arg );
   std::string getName() const;
@@ -32,6 +33,7 @@ private:
 
 
 inline Customer::Customer() {}
+inline Customer::~Customer(void) {}
 
 inline Customer::Customer( const std::string& name ): 
   customerName( name ) {}
